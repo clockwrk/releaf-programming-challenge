@@ -1,0 +1,26 @@
+<div>
+  <h1>Nigerian Crop Price, Consumption and Production Trends from {{slider.min}} - {{slider.max}}</h1>
+  <rzslider
+      rz-slider-model="slider.min"
+      rz-slider-high="slider.max"
+      rz-slider-options="slider.options"></rzslider>
+<!-- {{mockData}} -->
+
+
+<table style="font-size:2em; cursor:pointer;">
+  <table style="font-size:2em; cursor:pointer;">
+
+    <tr>
+      <td data-id="00" data-ng-click="clickedBlock($event)" style="border-width: 0px 5px 5px 0px; border-style: solid; min-width: 2em; height: 2em;">{{item.item}}</td>
+      <td data-id="01" data-ng-click="clickedBlock($event)" style="border-width: 0px 5px 5px 5px; border-style: solid; min-width: 2em; height: 2em;">Price</td>
+      <td data-id="01" data-ng-click="clickedBlock($event)" style="border-width: 0px 5px 5px 5px; border-style: solid; min-width: 2em; height: 2em;">Consumption</td>
+      <td data-id="01" data-ng-click="clickedBlock($event)" style="border-width: 0px 5px 5px 5px; border-style: solid; min-width: 2em; height: 2em;">Production</td>
+    </tr>
+  <tr ng-repeat="item in displayDataForCurrentRange">
+    <td data-id="00" data-ng-click="clickedBlock($event)" style="border-width: 0px 5px 5px 0px; border-style: solid; min-width: 2em; height: 2em;">{{item.item}}</td>
+    <td data-id="01" data-ng-click="clickedBlock($event)" style="border-width: 0px 5px 5px 5px; border-style: solid; min-width: 2em; height: 2em;"><div class="arrow-up" ng-show="item.direction"></div><div class="arrow-down" ng-show="!item.direction"></div></td>
+    <td data-id="01" data-ng-click="clickedBlock($event)" style="border-width: 0px 5px 5px 5px; border-style: solid; min-width: 2em; height: 2em;"></td>
+    <td data-id="01" data-ng-click="clickedBlock($event)" style="border-width: 0px 5px 5px 5px; border-style: solid; min-width: 2em; height: 2em;"></td>
+  </tr>
+</table>
+</div>

@@ -1,0 +1,26 @@
+{
+  "name": "releaf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@uirouter/angularjs": "latest",
+    "angular": "^1.6.4",
+    "angularjs-slider": "^6.1.1",
+    "babyparse": "^0.4.6",
+    "body-parser": "^1.17.1",
+    "chalk": "^1.1.3",
+    "express": "^4.15.2",
+    "http": "0.0.0",
+    "path": "^0.12.7",
+    "pg": "^6.1.5",
+    "sequelize": "^3.30.4",
+    "ui-bootstrap": "^0.1.10",
+    "volleyball": "^1.4.1"
+  }
+}
