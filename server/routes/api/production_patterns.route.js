@@ -1,10 +1,14 @@
 let express = require('express'),
-    router = express.Router();
+    router = express.Router(),
+    Production = require('../../db/models/production_patterns.model.js');;
 module.exports = router;
 
 router.get('/', function(req, res, next) {
-    console.log('Hit the all production patterns route')
-    res.send('Hit the all production patterns route');
+  Production.findAll({}).then(allProduction => {
+      res.send(allProduction)
+  }).catch(next)
+    // console.log('Hit the all production patterns route')
+    // res.send('Hit the all production patterns route');
 })
 
 router.get('/:consumptionID', function(req, res, next) {

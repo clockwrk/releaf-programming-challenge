@@ -1,5 +1,6 @@
-<div>
-  <h1>Nigerian Crop Price, Consumption and Production Trends from {{slider.min}} - {{slider.max}}</h1>
+<div class="container" style="width:40%; height:auto;
+float:left;">
+  <h1>Nigerian Crop price trend from {{slider.min}} - {{slider.max}}</h1>
   <rzslider
       rz-slider-model="slider.min"
       rz-slider-high="slider.max"
@@ -11,16 +12,22 @@
   <table style="font-size:2em; cursor:pointer;">
 
     <tr>
-      <td data-id="00" data-ng-click="clickedBlock($event)" style="border-width: 0px 5px 5px 0px; border-style: solid; min-width: 2em; height: 2em;">{{item.item}}</td>
-      <td data-id="01" data-ng-click="clickedBlock($event)" style="border-width: 0px 5px 5px 5px; border-style: solid; min-width: 2em; height: 2em;">Price</td>
-      <td data-id="01" data-ng-click="clickedBlock($event)" style="border-width: 0px 5px 5px 5px; border-style: solid; min-width: 2em; height: 2em;">Consumption</td>
-      <td data-id="01" data-ng-click="clickedBlock($event)" style="border-width: 0px 5px 5px 5px; border-style: solid; min-width: 2em; height: 2em;">Production</td>
+      <td style="border-width: 0px 5px 5px 0px; border-style: solid; min-width: 2em; height: 2em; text-align: center;">Nigeria Crops</td>
+      <td style="border-width: 0px 5px 5px 5px; border-style: solid; min-width: 2em; height: 2em;text-align: center;">Price</td>
+      <!-- <td style="border-width: 0px 5px 5px 5px; border-style: solid; min-width: 2em; height: 2em;">Consumption</td>
+      <td style="border-width: 0px 5px 5px 5px; border-style: solid; min-width: 2em; height: 2em;">Production</td> -->
     </tr>
   <tr ng-repeat="item in displayDataForCurrentRange">
-    <td data-id="00" data-ng-click="clickedBlock($event)" style="border-width: 0px 5px 5px 0px; border-style: solid; min-width: 2em; height: 2em;">{{item.item}}</td>
-    <td data-id="01" data-ng-click="clickedBlock($event)" style="border-width: 0px 5px 5px 5px; border-style: solid; min-width: 2em; height: 2em;"><div class="arrow-up" ng-show="item.direction"></div><div class="arrow-down" ng-show="!item.direction"></div></td>
-    <td data-id="01" data-ng-click="clickedBlock($event)" style="border-width: 0px 5px 5px 5px; border-style: solid; min-width: 2em; height: 2em;"></td>
-    <td data-id="01" data-ng-click="clickedBlock($event)" style="border-width: 0px 5px 5px 5px; border-style: solid; min-width: 2em; height: 2em;"></td>
+    <td style="border-width: 0px 5px 5px 0px; border-style: solid; min-width: 2em; height: 2em; text-align: center;">{{item.item}}</td>
+    <td style="border-width: 0px 5px 5px 5px; border-style: solid; min-width: 2em; height: 2em; text-align: center;"><div class="arrow-up" ng-show="item.direction"></div><div class="arrow-down" ng-show="!item.direction"></div></td>
+    <!-- <td style="border-width: 0px 5px 5px 5px; border-style: solid; min-width: 2em; height: 2em;"></td>
+    <td style="border-width: 0px 5px 5px 5px; border-style: solid; min-width: 2em; height: 2em;"></td> -->
   </tr>
 </table>
 </div>
+<div class="container" style="width-min:50%; height:auto;
+float:right; background-color: red;">
+<highchart id="chart1" config="chartConfig"></highchart>
+bluesdaf;kldsjf;lkjas;ldkfj;lkadjsf;lkajsd;lkfja;lskdjf;lkasjdf;lkjasd;lfkjas;ldkfj;laskdjf;lkasdjf;lkasjdf;lkajsdfl;</div>
+<div class="container" style="width-min:50%; height:auto;
+float:right; background-color: blue;">reddsajkfljas;lkfja;lskdjf;lkasdjf;lkajsdl;kfjasl;kdjfl;kasjdfl;kjasl;dkfjasl;kdjf;alskdjf;a</div>
