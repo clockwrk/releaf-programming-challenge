@@ -1,4 +1,5 @@
-var app = angular.module('releafApp', ['ui.router', 'rzModule','highcharts-ng']);
+
+var app = angular.module('releafApp', ['ui.router', 'rzModule']);
 
 app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
 	    $urlRouterProvider.otherwise('/dashboard');

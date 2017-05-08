@@ -1,0 +1,20 @@
+{
+  "name": "releaf",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "JoseRenteria <jose.renteria@forwardlane.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/clockwrk/releaf-programming-challenge",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "amcharts-angular": "*"
+  }
+}

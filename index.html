@@ -9,14 +9,17 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <!-- <script src="/angular/angular.js" defer></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/fusioncharts/fusioncharts.js" ></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+  <script type="text/javascript" src="/js/fusion-nigeria/angular-fusioncharts.js"></script>
   <!-- <script src="/angular-animate/angular-animate.js" defer></script> -->
   <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.js" defer></script>
-  <script src="/angularjs-slider/dist/rzslider.js" defer></script>
-  <!-- <script src="http://code.highcharts.com/stock/highstock.src.js"></script> -->
-  <script src="http://code.highcharts.com/highcharts.src.js"></script>
-  <!-- // <script src="/@uirouter/release/angular-ui-router.js" defer>
-<script src="/angular-ui-bootstrap/dist/ui-bootstrap.js" defer></script> -->
+  <script src="/angularjs-slider/dist/rzslider.js" ></script>
+
+  <script type="text/javascript" src="/js/fusioncharts/themes/fusioncharts.theme.fint.js" ></script>
+  <script type="text/javascript" src="/js/fusion-nigeria/nigeria.map.js" ></script>
+
 
   <script src="/js/app.js" defer></script>
   <script src="/js/dashboard/dashboard.controller.js" defer></script>
@@ -43,23 +46,91 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" src="images/favicon.ico">
 
+<!--
+BOOTSTRAP ---------------------------------------------->
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 </head>
 <body>
-<highchart id="chart1" config="chartConfig"></highchart>
+
+  <div id='container'>
+      <div class='border-bottom' id='content'>
+
+          <div class='chartCont border-right' id='sales-chart-container'>
+              <ui-view ></ui-view>
+              <div id="chartContainer">A US map will load here!</div>
+              <div style="display: inline-block">
+                <select name="Year" id="year-options" >
+                  <!-- <option value="volvo">Volvo XC90</option>
+                  <option value="saab">Saab 95</option>
+                  <option value="mercedes">Mercedes SLK</option>
+                  <option value="audi">Audi TT</option> -->
+                </select>
+                <select name="Indicator" id="indicator-options" >
+                  <!-- <option value="volvo">Volvo XC90</option>
+                  <option value="saab">Saab 95</option>
+                  <option value="mercedes">Mercedes SLK</option>
+                  <option value="audi">Audi TT</option> -->
+                </select>
+                <select name="Item" id="item-options" >
+                  <!-- <option value="volvo">Volvo XC90</option>
+                  <option value="saab">Saab 95</option>
+                  <option value="mercedes">Mercedes SLK</option>
+                  <option value="audi">Audi TT</option> -->
+                </select>
+              </div>
+
+
+
+
+              <!-- <span id="item-buttons" class="btn-group center" style="display: inline-block;"></span> -->
+
+
+          </div>
+          <!-- <div class='chartCont' id='trans-chart-container'>FusionCharts will load here.</div> -->
+
+
+          <div class='chartCont border-right' id='footfall-chart-container'>
+
+          </div>
+          <!-- <div class='chartCont' id='cs-chart-container'>FusionCharts will load here.</div> -->
+
+      </div>
+      <div id='footer'>
+          <!-- <p>This application was built using <a href="http://www.fusioncharts.com" target="_blank" title="FusionCharts - Data to delight... in minutes"><b>FusionCharts Suite XT</b></a> -->
+  </p>
+      </div>
+  </div>
+
+
+
+
+
+
 {{}}
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
+  <span style="display:inline-block;" class="container row">
 
     <!-- <div class="row">
       <div class="one-half column" style="margin-top: 25%">
         <h4>Basic Page</h4>
         <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
       </div> -->
+<div>
+  <div id="chartContainer">A US map will load here!</div>
+  <span id="item-buttons" class="btn-group center" style="display: inline-block;"></span>
+</div>
 
 
-      <ui-view></ui-view>
-    </div>
+    </span>
   </div>
 
 
